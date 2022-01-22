@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player | CodingNepal</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/mystyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <div class="d-flex full">
+      <div class="main-app">
+        <header id="header">
+          <nav class="links" style="--items: 3">
+            <a href="#" data-target="list-song" onclick="changeTab(this)"
+              >Nhạc mới</a
+            >
+            <a href="#" data-target="list-top" onclick="changeTab(this)"
+              >Bảng xếp hạng</a
+            >
+            <a href="#" data-target="login" onclick="changeTab(this)"
+              >Đăng Nhập</a
+            >
+            <span class="line"></span>
+          </nav>
+        </header>
+        <main>
+          <div class="selected" id="list-song">
+            <div class="list" id="list-new">
+              <!-- <div class="card 2">
+                  <div class="card_image">
+                    <img
+                    src="https://bloghocpiano.com/wp-content/uploads/2021/03/1055172-music-background-images-2560x1600-xiaomi.jpg"
+                    />
+                  </div>
+                  <div class="card_title title-white">
+                    <p>Card Title</p>
+                </div>
+              </div> -->
+            </div>
+          </div>
+
+          <div id="list-top" style="padding: 20px">
+            <div style="width: 100%; display: flex; justify-content: center">
+              <div class="leaderboard">
+                <div class="leaderboard__profiles" id="list-song-top">
+                  <article class="leaderboard__profile">
+                    <span class="leaderboard__value">1</span>
+                    <img
+                      src="https://randomuser.me/api/portraits/men/32.jpg"
+                      alt=" song"
+                      class="leaderboard__picture"
+                    />
+                    <span class="leaderboard__name">Mark Zuckerberg</span>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="login">
+            <div class="login-box">
+              <h2>Login</h2>
+              <form>
+                <div class="user-box">
+                  <input type="text" name="" required="" />
+                  <label>Username</label>
+                </div>
+                <div class="user-box">
+                  <input type="password" name="" required="" />
+                  <label>Password</label>
+                </div>
+                <a href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Submit
+                </a>
+              </form>
+            </div>
+          </div>
+        </main>
+      </div>
+      <div class="player">
+        <div class="close-player">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <svg viewBox="0 0 36 36" class="circle">
+            <path
+              stroke-dasharray="100, 100"
+              d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+          </svg>
+        </div>
+        <div class="wrapper">
+          <div class="img-area">
+            <img src="" id="avt" alt="" />
+          </div>
+          <div class="song-details">
+            <p class="name"></p>
+            <p class="artist"></p>
+          </div>
+          <div class="progress-area">
+            <div class="progress-bar">
+              <audio id="main-audio" src=""></audio>
+            </div>
+            <div class="song-timer">
+              <span class="current-time">0:00</span>
+              <span class="max-duration">0:00</span>
+            </div>
+          </div>
+          <div class="controls">
+            <i id="repeat-plist" class="material-icons" title="Playlist looped"
+              >repeat</i
+            >
+            <i id="prev" class="material-icons">skip_previous</i>
+            <div class="play-pause">
+              <i class="material-icons play">play_arrow</i>
+            </div>
+            <i id="next" class="material-icons">skip_next</i>
+            <i id="more-music" class="material-icons">queue_music</i>
+          </div>
+          <div class="music-list">
+            <div class="header">
+              <div class="row">
+                <i class="list material-icons">queue_music</i>
+                <span>Music list</span>
+              </div>
+              <i id="close" class="material-icons">close</i>
+            </div>
+            <ul>
+              <!-- here li list are coming from js -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script/app.js"></script>
+  </body>
+</html>
